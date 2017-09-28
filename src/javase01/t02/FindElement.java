@@ -1,8 +1,12 @@
 package javase01.t02;
 
+import java.util.Scanner;
+
 public class FindElement {
     public static void main(String[] args) {
-        double eps = 0.00254;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter an epsilon: ");
+        double eps = in.nextDouble(); //Enter an epsilon
         int n = 1;
         double a;
         if (eps > 0) {
