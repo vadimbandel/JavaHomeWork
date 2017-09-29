@@ -4,13 +4,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class FindMaxPair {
-    static {
-        System.out.print("Enter the number of items: ");
-    }
 
-    private Scanner in = new Scanner(System.in);
-    private int n = in.nextInt();
-    private double[] a = new double[2 * n];
+    private int n;
+    private double[] a;
+
+    private FindMaxPair(int n) {
+        this.n = n;
+        this.a = new double[2 * n];
+    }
 
     //Заполняем массив случайными действительными числами от 0 до 100
     private void fillAnArray() {
@@ -41,7 +42,11 @@ public class FindMaxPair {
 
 
     public static void main(String[] args) {
-        FindMaxPair test = new FindMaxPair();
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number of items: ");
+        int n = in.nextInt();
+        FindMaxPair test = new FindMaxPair(n);
         test.fillAnArray();
         test.showArr();
         test.findMaxSum();
