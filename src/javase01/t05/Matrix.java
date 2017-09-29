@@ -30,7 +30,6 @@ public class Matrix {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int dim;
-
         do {
             System.out.print("Enter the dimension of the square matrix, it must be positve number: ");
             dim = in.nextInt();
